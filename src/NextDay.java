@@ -14,18 +14,18 @@ public class NextDay {
             return "Invalid day";
         }
 
-        // Increment the day
+
         day++;
 
-        // Check if we need to roll over to the next month
+        // Neu 32 > 31 thang 3 ==> 1 thang 4
         if (day > daysInMonth[month - 1]) {
-            day = 1; // Reset day to 1
-            month++; // Increment month
+            day = 1;
+            month++;
 
-            // Check if we need to roll over to the next year
+            // Neu thang 12++ = 13 => 1 thang 1
             if (month > 12) {
-                month = 1; // Reset month to January
-                year++; // Increment year
+                month = 1;
+                year++;
             }
         }
 
@@ -40,22 +40,3 @@ public class NextDay {
         return year + 1;
     }
 }
-//        boolean check = true;
-//        do {
-//            Scanner scanner = new Scanner(System.in);
-//            System.out.println("Enter date: ");
-//            check = false;
-//        }
-//        Scanner in = new Scanner(System.in);
-//        int dateInput;
-//        int monthInput;
-//        int yearInput;
-//        while(true){
-//            System.out.print("Enter date: ");
-//            dateInput = in.nextInt();
-////            System.out.print("Enter month: ");
-////            monthInput = in.nextInt();
-////            System.out.print("Enter year: ");
-////            yearInput = in.nextInt();
-//
-//        }
